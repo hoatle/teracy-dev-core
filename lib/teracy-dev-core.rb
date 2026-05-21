@@ -26,7 +26,9 @@ module TeracyDevCore
     TeracyDev.register_processor(TeracyDevCore::Processors::ExtensionPath.new, weight = 2)
     TeracyDev.register_processor(TeracyDevCore::Processors::Variables.new, weight = 1)
 
-    TeracyDev.register_configurator(TeracyDevCore::Config::Compat.new)
+    # weight = 9 (highest) ensures Compat runs first so PluginManagerShim is applied
+    # before Plugins configurator calls Plugin.sync -> install_plugin
+    TeracyDev.register_configurator(TeracyDevCore::Config::Compat.new, weight = 9)
     TeracyDev.register_configurator(TeracyDevCore::Config::VM.new)
     TeracyDev.register_configurator(TeracyDevCore::Config::Networks.new)
     TeracyDev.register_configurator(TeracyDevCore::Config::Plugins.new)
