@@ -1,6 +1,13 @@
 # Change Log
 
 
+## [v0.5.1][] (2026-05-26)
+
+- Bug Fixes:
+  + Compat PluginManagerShim not applied early enough, causing plugin install failures #70
+
+Details: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/7?closed=1
+
 ## [v0.5.0][] (2026-05-11)
 
 - Improvements:
@@ -86,3 +93,4 @@ Details: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/1?close
 [v0.3.0]: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/3?closed=1
 [v0.4.0]: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/4?closed=1
 [v0.5.0]: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/5?closed=1
+[v0.5.1]: https://github.com/teracyhq-incubator/teracy-dev-core/milestone/7?closed=1
